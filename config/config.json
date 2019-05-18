@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "BeeDP_1975",
+    "database": "statues_db",
     "host": "localhost",
     "dialect": "mysql"
   },
