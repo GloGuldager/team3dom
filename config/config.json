@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "default",
-    "database": "statues_db",
+    "database": "statue_db",
     "host": "localhost",
     "dialect": "mysql"
   },
