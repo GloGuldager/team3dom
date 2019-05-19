@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "default",
     "database": "statue_db",
     "host": "localhost",
     "dialect": "mysql"
