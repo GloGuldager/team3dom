@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
     LATITUDE: DataTypes.DECIMAL,
     LONGITUDE: DataTypes.DECIMAL
   }, {});
-  Statue.associate = function(models) {
+  Statue.associate = function (models) {
     // associations can be defined here
+
+    Statue.hasMany(models.User, {
+      onDelete: "cascade"
+    });
   };
-  return Statue;
 };
+return Statue;
