@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "default",
-    "database": "statue_db",
+    "password": "",
+    "database": "statueQuest_db",
     "host": "localhost",
     "dialect": "mysql"
   },
