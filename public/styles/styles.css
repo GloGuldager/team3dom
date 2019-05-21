@@ -1,22 +1,94 @@
 
 
+.list-group-item {
+  line-height: 2.5;
+}
+
+h1{
+  text-align: center;
+  padding: 20px;
+  margin-top:10%;
+  color: #f2f2f2;
+}
+
 body{
-  height: 100%;
-  background-color:green;
-
+  height: 1000px;
 }
 
-
-#landingPage{
-
-  display:flex;
-  flex-direction: column;
-  /* justify-content: center; */
-
+.img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  /* opacity: 0.9; */
 }
 
-.title{
+.getStarted{
+  float: right;
+}
 
+p{
+  color: #f2f2f2;
+}
+
+h2{
+  text-align: center;
+  margin-top:20%;
+  color: #f2f2f2;
+}
+
+h5{
+  text-align: center;
+  margin-bottom:40px; 
+}
+
+.row{
+  margin-top: 5%;
+  position: auto;
+  border-radius: 50%;
+  
+}
+
+#customers{
+  margin: auto;
+  margin-top: 5%;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(92, 163, 204);
   color: white;
+}
+
+.photos{
+  margin: auto;
+  background-color: blue;
+  width:50%;
+  height:400px;
+  padding: 20px;
+  align-content: center;
+  border-style: solid;
+}
+
+.footer{
+  margin-top: 3%;
+  padding: 10px;
+  color: #f2f2f2;
+}
+
+.subscribe{
+  margin-left: 40em
 
 }
