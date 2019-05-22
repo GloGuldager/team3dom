@@ -1,12 +1,13 @@
 $(document).ready(function() {
+  console.log("hello world");
   // Getting references to the name input and author container, as well as the table body
   var nameInput = $("#statue-name");
   var statuesList = $("tbody");
   var statueContainer = $(".statue-container");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an Author
-//   $(document).on("submit", "#author-form", handleAuthorFormSubmit);
-//   $(document).on("click", ".delete-author", handleDeleteButtonPress);
+  //   $(document).on("submit", "#author-form", handleAuthorFormSubmit);
+  //   $(document).on("click", ".delete-author", handleDeleteButtonPress);
 
   // Getting the initial list of Authors
   getStatues();
@@ -48,6 +49,7 @@ $(document).ready(function() {
     newTr.append(
       "<td><a style='cursor:pointer;color:blue' class='select-statue'>Select</a></td>"
     );
+    console.log(newTr);
     return newTr;
   }
 
@@ -71,8 +73,8 @@ $(document).ready(function() {
       .remove();
     statueContainer.children(".alert").remove();
     if (rows.length) {
-      console.log(rows);
-      statueList.prepend(rows);
+      //console.log(rows);
+      statuesList.prepend(rows);
     } else {
       renderEmpty();
     }
