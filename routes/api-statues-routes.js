@@ -14,7 +14,7 @@ module.exports = function(app) {
   // GET route for getting all of the statue
   app.get("/api/statues/", function(req, res) {
     db.Statue.findAll({}).then(function(dbStatues) {
-      console.log("hello world");
+      //console.log(dbStatues);
       res.json(dbStatues);
     });
   });
