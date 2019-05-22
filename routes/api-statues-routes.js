@@ -13,14 +13,15 @@ var db = require("../models");
 module.exports = function(app) {
   // GET route for getting all of the statue
   app.get("/api/statues/", function(req, res) {
-    db.Statues.findAll({}).then(function(dbStatues) {
+    db.Statue.findAll({}).then(function(dbStatues) {
+      //console.log(dbStatues);
       res.json(dbStatues);
     });
   });
 
   // Get route for retrieving a single statue
   app.get("/api/statues/:id", function(req, res) {
-    db.Statues.findOne({
+    db.Statue.findOne({
       where: {
         id: req.params.id
       }
@@ -32,7 +33,7 @@ module.exports = function(app) {
   // POST route for saving a new statue
   app.post("/api/statues", function(req, res) {
     console.log(req.body);
-    db.Statues.create({
+    db.Statue.create({
       name: req.body.title,
       address: req.body.body,
       site: req.body.site,
@@ -45,7 +46,7 @@ module.exports = function(app) {
 
   // DELETE route for deleting statues
   app.delete("/api/statues/:id", function(req, res) {
-    db.Statues.destroy({
+    db.Statue.destroy({
       where: {
         id: req.params.id
       }
@@ -56,7 +57,7 @@ module.exports = function(app) {
 
   // PUT route for updating statue
   app.put("/api/statues", function(req, res) {
-    db.Statues.update(req.body, {
+    db.Statue.update(req.body, {
       where: {
         id: req.body.id
       }

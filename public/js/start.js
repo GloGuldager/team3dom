@@ -1,70 +1,103 @@
 $(document).ready(function() {
-  /* global moment */
-
-  // blogContainer holds all of our posts
+  console.log("hello world");
+  // Getting references to the name input and author container, as well as the table body
+  var nameInput = $("#statue-name");
+  var statuesList = $("tbody");
   var statueContainer = $(".statue-container");
-  // Click events for the edit and delete buttons
-  // $(document).on("click", "button.delete", handlePostDelete);
-  // $(document).on("click", "button.edit", handlePostEdit);
-  // Variable to hold our posts
-  var statues;
+  // Adding event listeners to the form to create a new object, and the button to delete
+  // an Author
+  //   $(document).on("submit", "#author-form", handleAuthorFormSubmit);
+  //   $(document).on("click", ".delete-author", handleDeleteButtonPress);
 
-  // InitializeRows handles appending all of our constructed post HTML inside blogContainer
-  function initializeRows() {
-    statueContainer.empty();
-    var statuesToAdd = [];
-    for (var i = 0; i < posts.length; i++) {
-      statuesToAdd.push(createNewRow(statues[i]));
-    }
-    statueContainer.append(statuesToAdd);
+  // Getting the initial list of Authors
+  getStatues();
+
+  // A function to handle what happens when the form is submitted to create a new Author
+  //   function handleAuthorFormSubmit(event) {
+  //     event.preventDefault();
+  //     // Don't do anything if the name fields hasn't been filled out
+  //     if (
+  //       !nameInput
+  //         .val()
+  //         .trim()
+  //         .trim()
+  //     ) {
+  //       return;
+  //     }
+  //     // Calling the upsertAuthor function and passing in the value of the name input
+  //     upsertAuthor({
+  //       name: nameInput.val().trim()
+  //     });
+  //   }
+
+  // A function for creating an author. Calls getAuthors upon completion
+  //   function upsertAuthor(authorData) {
+  //     $.post("/api/authors", authorData).then(getAuthors);
+  //   }
+
+  // Function for creating a new list row for authors
+  function createStatueRow(statueData) {
+    //console.log(statueData);
+    var newTr = $("<tr>");
+    newTr.data("statue", statueData);
+    newTr.append("<td>" + statueData.ASSET_NAME + "</td>");
+    newTr.append("<td>" + statueData.ASSET_ADDR + "</td>");
+    newTr.append("<td>" + statueData.SITE_NAME + "</td>");
+    newTr.append("<td>" + statueData.LATITUDE + "</td>");
+    newTr.append("<td>" + statueData.LONGITUDE + "</td>");
+
+    newTr.append(
+      "<td><a style='cursor:pointer;color:blue' class='select-statue'>Select</a></td>"
+    );
+    console.log(newTr);
+    return newTr;
   }
 
-  initializeRows();
-
-  // This function constructs a post's HTML
-  function createNewRow(statue) {
-    // var formattedDate = new Date(post.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    var newStatueTable = $("<div>");
-    newStatueTable.addClass("table table-striped");
-    var newStatueTableHeading = $("<div>");
-    newStatueTableHeading.addClass("thead-dark");
-    newStatueTableHeadingRow = $("<div>");
-    // var deleteBtn = $("<button>");
-    // deleteBtn.text("x");
-    // deleteBtn.addClass("delete btn btn-danger");
-    // var editBtn = $("<button>");
-    // editBtn.text("EDIT");
-    // editBtn.addClass("edit btn btn-info");
-    // var newPostTitle = $("<h2>");
-    // var newPostDate = $("<small>");
-    // var newPostAuthor = $("<h5>");
-    // newPostAuthor.text("Written by: " + post.Author.name);
-    // newPostAuthor.css({
-    //   float: "right",
-    //   color: "blue",
-    //   "margin-top": "-10px"
-    // });
-    var newStatueTableBody = $("<div>");
-    newStatueTableBody.addClass("card-body");
-
-    for (var i = 0; i < statueContainer.length; i++) {
-      var newStatueBody = $("<p>");
-      newStatueTitle.text(statues.ASSET_NAME + " ");
-    }
-
-    
-    newPostBody.text(statue.body);
-    newPostDate.text(formattedDate);
-    newPostTitle.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
-    newPostCardHeading.append(newPostTitle);
-    newPostCardHeading.append(newPostAuthor);
-    newPostCardBody.append(newPostBody);
-    newPostCard.append(newPostCardHeading);
-    newPostCard.append(newPostCardBody);
-    newPostCard.data("post", post);
-    return newPostCard;
+  // Function for retrieving authors and getting them ready to be rendered to the page
+  function getStatues() {
+    $.get("/api/statues", function(data) {
+      var rowsToAdd = [];
+      for (var i = 0; i < data.length; i++) {
+        rowsToAdd.push(createStatueRow(data[i]));
+      }
+      renderStatuesList(rowsToAdd);
+      nameInput.val("");
+    });
   }
+
+  // A function for rendering the list of authors to the page
+  function renderStatuesList(rows) {
+    statuesList
+      .children()
+      .not(":last")
+      .remove();
+    statueContainer.children(".alert").remove();
+    if (rows.length) {
+      //console.log(rows);
+      statuesList.prepend(rows);
+    } else {
+      renderEmpty();
+    }
+  }
+
+  // Function for handling what to render when there are no authors
+  //   function renderEmpty() {
+  //     var alertDiv = $("<div>");
+  //     alertDiv.addClass("alert alert-danger");
+  //     alertDiv.text("You must create an Author before you can create a Post.");
+  //     authorContainer.append(alertDiv);
+  //   }
+
+  // Function for handling what happens when the delete button is pressed
+  //   function handleDeleteButtonPress() {
+  //     var listItemData = $(this)
+  //       .parent("td")
+  //       .parent("tr")
+  //       .data("author");
+  //     var id = listItemData.id;
+  //     $.ajax({
+  //       method: "DELETE",
+  //       url: "/api/authors/" + id
+  //     }).then(getAuthors);
+  //   }
 });
