@@ -25,7 +25,9 @@ $(document).ready(function() {
       console.log("created new user");
 
       //location = "http://wwww.mozilla.org";
-      location = "http://localhost:3000/table";
+      // location = "http://localhost:3000/table";
+      // location = "https://statuequest.herokuapp.com/table";
+      location = "/table";
     });
   });
 });
