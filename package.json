@@ -7,11 +7,12 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
+    "seed": "NODE_ENV=production JAWSDB_URL=mysql://slwlf7vcojm69j0n:ws9y4hl32rlhkk3x@o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/z5d8frinupuv8hpp npx sequelize-cli db:seed:all",
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.6.5",
