@@ -18,18 +18,20 @@ module.exports = {
         type: Sequelize.STRING
       },
       LATITUDE: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(10,8),
       },
       LONGITUDE: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(11,8),
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
       }
     });
   },

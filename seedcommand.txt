@@ -1,0 +1,1 @@
+NODE_ENV=production JAWSDB_URL=mysql://slwlf7vcojm69j0n:ws9y4hl32rlhkk3x@o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/z5d8frinupuv8hpp node_modules/.bin/sequelize db:seed:all
