@@ -30,6 +30,7 @@ $(document).ready(function() {
   //     });
   //   }
 
+  
   // A function for creating an author. Calls getAuthors upon completion
   //   function upsertAuthor(authorData) {
   //     $.post("/api/authors", authorData).then(getAuthors);
@@ -47,7 +48,7 @@ $(document).ready(function() {
     newTr.append("<td>" + statueData.LONGITUDE + "</td>");
 
     newTr.append(
-      "<td><a style='cursor:pointer;color:blue' class='select-statue'>Select</a></td>"
+      "<td><a href='/upload/" + statueData.id + "' style='cursor:pointer;color:blue' class='select select-statue'>Select</a></td>"
     );
     console.log(newTr);
     return newTr;
