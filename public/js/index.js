@@ -1,20 +1,22 @@
 $(document).ready(function() {
   console.log("hello world");
 
-  $(".enterUserForm").on("submit", function(event) {
+  //$(".btnCreateUser").on("submit", function(event) {
+  $(".btnCreateUser").click(function(event) {
     console.log("hello");
 
     // // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     var newUser = {
-      user: $("#fullName")
+      user: $("#user-name")
         .val()
         .trim()
     };
 
     console.log(newUser);
-
+    console.log($);
+    $("#user-name").val("");
     // Send the POST request.
     $.ajax("/api/users", {
       type: "POST",
@@ -22,18 +24,8 @@ $(document).ready(function() {
     }).then(function() {
       console.log("created new user");
 
-      location = "http://wwww.mozilla.org";
-
-      // $.get("/api/statues", function(data) {
-      //   console.log("Statues", data);
-      //   statues = data;
-      //   if (!statues || !statues.length) {
-      //     displayEmpty();
-      //   }
-      //   else {
-
-      //     // initializeRows();
-      //   }
+      //location = "http://wwww.mozilla.org";
+      location = "http://localhost:3000/table";
     });
   });
 });
