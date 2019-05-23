@@ -1,21 +1,76 @@
-
-
-.list-group-item {
-  line-height: 2.5;
+#camera,
+#camera--view,
+#camera--sensor,
+#camera--output {
+  position: fixed;
+  max-height: 50%;
+  max-width: 50%;
+  object-fit: cover;
 }
 
-h1{
+#map {
+  position: fixed;
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+  left: 50%;
+  float: left;
+}
+
+#camera--view,
+#camera--sensor,
+#camera--output {
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
+#camera--trigger {
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 100px);
+}
+
+.taken {
+  height: 100px !important;
+  width: 100px !important;
+  transition: all 0.5s ease-in;
+  border: solid 3px white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+h1 {
   text-align: center;
   padding: 20px;
-  margin-top:10%;
+  margin-top: 10%;
   color: #f2f2f2;
 }
 
-body{
-  height: 1000px;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.img{
+.link {
+  max-width: 100%;
+  display: flex;
+}
+
+.img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -23,46 +78,50 @@ body{
   /* opacity: 0.9; */
 }
 
-.getStarted{
+.getStarted {
   float: right;
 }
 
-p{
+p {
   color: #f2f2f2;
 }
 
-h2{
+h2 {
   text-align: center;
-  margin-top:20%;
+  margin-top: 20%;
   color: #f2f2f2;
 }
 
-h5{
+h5 {
   text-align: center;
-  margin-bottom:40px; 
+  margin-bottom: 40px;
 }
 
-.row{
+.row {
   margin-top: 5%;
   position: auto;
   border-radius: 50%;
-  
 }
 
-#customers{
+#customers {
   margin: auto;
   margin-top: 5%;
   width: 100%;
 }
 
-#customers td, #customers th {
+#customers td,
+#customers th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {
+  background-color: #ddd;
+}
 
 #customers th {
   padding-top: 12px;
@@ -72,23 +131,29 @@ h5{
   color: white;
 }
 
-.photos{
+.photos {
   margin: auto;
   background-color: blue;
-  width:50%;
-  height:400px;
+  width: 50%;
+  height: 400px;
   padding: 20px;
   align-content: center;
   border-style: solid;
 }
 
-.footer{
+.footer {
   margin-top: 3%;
   padding: 10px;
   color: #f2f2f2;
 }
 
-.subscribe{
-  margin-left: 40em
+.subscribe {
+  margin-left: 40em;
+}
 
+@media (min-width:800px) and (min-width: 1000px) {
+  .link {
+    max-width: 20%;
+    max-height: 10%;
+  }
 }
