@@ -21,6 +21,6 @@ module.exports = function(app) {
   });
 
   app.get("/upload/:id", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/upload.html"));  
+    res.sendFile(path.join(__dirname, "../public/upload.html"));
   });
 };
