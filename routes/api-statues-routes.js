@@ -30,8 +30,6 @@ module.exports = function(app) {
     });
   });
 
-
-
   // POST route for saving a new statue
   app.post("/api/statues", function(req, res) {
     console.log(req.body);
