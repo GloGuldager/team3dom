@@ -79,9 +79,23 @@ body {
   /* opacity: 0.9; */
 }
 
-.getStarted {
-  float: right;
+.instructions {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  /* width: 50%; */
+  color: white;
+  /* opacity: 0.9; */
 }
+
+
+
+/* .getStarted {
+  float: right;
+} */
 
 p {
   color: #f2f2f2;
@@ -143,6 +157,12 @@ h5 {
 }
 
 .footer {
+  margin-top: 3%;
+  padding: 10px;
+  color: #f2f2f2;
+}
+
+.py-3 {
   margin-top: 3%;
   padding: 10px;
   color: #f2f2f2;
