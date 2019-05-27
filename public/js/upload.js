@@ -1,6 +1,8 @@
 $(document).ready(function() {
   console.log("Hello World");
 
+  var imgSrc;
+
   ajaxCall();
 
   function ajaxCall() {
@@ -50,7 +52,7 @@ $(document).ready(function() {
         // Try HTML5 geolocation.
         $("button").click(function() {
           event.preventDefault();
-          var imgSrc = $(".taken").attr("src");
+          imgSrc = $(".taken").attr("src");
           console.log(imgSrc);
           var image = new Image();
           image.src = imgSrc;
@@ -76,8 +78,11 @@ $(document).ready(function() {
                 console.log(distance);
                 if (distance <= 100) {
                   alert("You Win");
+                  submitPost(imgSrc);
                 } else {
                   alert("try again");
+                  submitPost(imgSrc);
+                  console.log(imgSrc);
                 }
               },
               function() {
@@ -101,6 +106,16 @@ $(document).ready(function() {
         );
         infoWindow.open(map);
       }
+    });
+  }
+
+  //submitPost(imgSrc);
+
+  //console.log(imgSrc);
+
+  function submitPost(Upload) {
+    $.post("/api/uploads/", Upload, function() {
+      window.location.href = "/table";
     });
   }
 });
