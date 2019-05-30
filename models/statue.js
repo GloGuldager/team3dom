@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  Statue.associate = function(models) {
-    // associations can be defined here
-    Statue.hasMany(models.Upload, {
-      onDelete: "cascade"
-    });
-  };
+  // Statue.associate = function(models) {
+  //   // associations can be defined here
+  //   Statue.hasMany(models.Upload, {
+  //     onDelete: "cascade"
+  //   });
+  // };
   return Statue;
 };
