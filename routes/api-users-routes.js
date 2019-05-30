@@ -1,6 +1,5 @@
 var db = require("../models");
 
-
 // POST route for saving a new user
 module.exports = function(app) {
   app.post("/api/users", function(req, res) {
@@ -13,8 +12,8 @@ module.exports = function(app) {
   });
 
   app.post("/api/uploads", function(req, res) {
-    
     var photo = req.body;
+
 
     //console.log(photo);
     
@@ -23,14 +22,13 @@ module.exports = function(app) {
       var photoText = key    
       console.log(photoText); 
       console.log(photoText.length);
+
       db.Upload.create({
         picture: photoText,
         UserId: 1
       }).then(function(dbPost) {
         res.json(dbPost);
-      });    
+      });
+    });
   });
-    
-   
-   });
 };

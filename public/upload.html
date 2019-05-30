@@ -49,61 +49,25 @@
 
   <body>
     <div class="container">
-      <div class="photos">
-        <main id="camera">
-          <!-- camera view -->
-          <video id="camera--view" autoplay playsinline></video>
+        <div class="fileUpload">
+            <h5>Take Your Selfie Photo at the Selected Statue</h5>
+            <h6>Statue Name:</h6>  <div id="statueName"></div>
+        </div>
 
-          <!-- camera sensor -->
-          <canvas id="camera--sensor"></canvas>
-
-          <!-- camera output -->
-          <img src="//:0" alt="" id="camera--output" />
-
-          <!-- Take picture button, should also use this button to get users location -->
-          <button id="camera--trigger">Say Cheese</button>
-        </main>
-        <!-- <form class="md-form" action="#">
-                <div class="file-field">
-                    <div class="btn btn-primary float-center">
-                        <span>Choose files</span>
-                        <input type="file" multiple>
-                    </div>
-                        <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Upload files">
-                        </div> -->
-        <!-- </div>
-            </form> -->
         <form class="box" method="post" action="" enctype="multipart/form-data">
-          <div class="fileUpload">
-            <h5>Upload Photos</h5>
-            <hr />
-            <p>Upload files from your Quest to continue your trivia.</p>
-            <br />
-            <!-- <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label> -->
-            <h6>Statue Name:</h6>
-            <input type="text" name="landmark" /><br /><br />
-            <input
-              class="file"
-              type="file"
-              name="files"
-              id="file"
-              data-multiple-caption="{count} files selected"
-              multiple
-            />
-            <button class="upload" type="submit">Upload</button>
+          <div class="photos">
+              <main id="camera">
+                <video id="camera--view" autoplay playsinline></video>
+                <canvas id="camera--sensor"></canvas>
+                <img src="//:0" alt="" id="camera--output" />
+                <button id="camera--trigger">Say Cheese</button>
+              </main>
           </div>
         </form>
-      </div>
+        <!-- <div id="map"></div> -->
     </div>
-    <div id="map"></div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
     <script
       async
       defer
@@ -131,20 +95,17 @@
   </body>
 
   <div class="footer bg-dark">
-    <div class="col-md-3 mt-md-0 mt-3">
-      <!-- Content -->
-      <h5 class="text-uppercase">Statue Quest</h5>
+    <!-- <div class="col-md-3 mt-md-0 mt-3">
       <p>
-        Here you can join our newsletter to get updates on our latest
-        Philadelphia Landmarks.
+        Enter a Username to archive your selfies.
       </p>
       <div class="subscribe">
         <div class="col-md-6 mt-md-0 mt-3">
-          <input type="text" name="email" size="60" /><br />Email:
-          <input type="submit" value="Subscribe" />
+          <input type="text" name="email" size="60" /><br />Username:
+          <input type="submit" value="Submit" />
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="footer-copyright text-center py-3">
       © 2019 Copyright Statue Quest
     </div>
