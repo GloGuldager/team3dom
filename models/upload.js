@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true
       }
     });
-    Upload.belongsTo(models.Statue, {
-      foreignKey: {
-        allowNull: true
-      }
-    });
+    // Upload.belongsTo(models.Statue, {
+    //   foreignKey: {
+    //     allowNull: true
+    //   }
+    // });
   };
   return Upload;
 };
