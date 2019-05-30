@@ -1,3 +1,4 @@
+
 #camera,
 #camera--view,
 #camera--sensor,
@@ -54,6 +55,7 @@ h1 {
   padding: 20px;
   margin-top: 10%;
   color: #f2f2f2;
+  /* font-family: 'Barlow', sans-serif; */
 }
 
 html,
@@ -74,15 +76,33 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5%;
   /* width: 50%; */
   width: 100%;
   height: auto;
   /* opacity: 0.5; */
 }
 
-.getStarted {
-  float: right;
+.instructions {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  padding: 20px;
+  background-color: #070707;
+  opacity: .6;
+  /* width: 50%; */
+  color: white;
+  /* opacity: 0.9; */
 }
+
+
+
+/* .getStarted {
+  float: right;
+} */
 
 p {
   color: #f2f2f2;
@@ -100,14 +120,14 @@ h5 {
   margin-top: 20px;
 }
 
-.copy{
-margin-top: 5%;
-}
 
 .row {
-  margin-top: 5%;
+  /* margin-top: 5%; */
   position: auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* background-color: #070707;
+  opacity: .6; */
+  width: 100%;
 }
 
 #user-form{
@@ -117,6 +137,7 @@ margin-top: 5%;
   margin: auto;
   margin-top: 5%;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 #customers td,
@@ -153,10 +174,17 @@ margin-top: 5%;
 }
 
 .img{
-  margin-left:30%;
+  margin-left:25%;
 }
 
 .footer {
+  /* margin-top: 3%; */
+  width: 100%;
+  padding: 10px;
+  color: #f2f2f2;
+}
+
+.py-3 {
   margin-top: 3%;
   padding: 10px;
   color: #f2f2f2;
@@ -171,10 +199,8 @@ margin-top: 5%;
     max-width: 20%;
     max-height: 10%;
   }
-  .img{
-
-  }
+  .img{}
   .subscribe{
-  max-width: 20%;
+  
   }
 }

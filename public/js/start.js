@@ -47,7 +47,9 @@ $(document).ready(function() {
     newTr.append("<td>" + statueData.LONGITUDE + "</td>");
 
     newTr.append(
-      "<td><a style='cursor:pointer;color:blue' class='select-statue'>Select</a></td>"
+      "<td><a href='/upload/" +
+        statueData.id +
+        "' style='cursor:pointer;color:blue' class='select select-statue'>Select</a></td>"
     );
     console.log(newTr);
     return newTr;
