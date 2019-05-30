@@ -24,6 +24,9 @@ $(document).ready(function() {
     }).then(function(dbPost) {
       console.log(dbPost);
       var map, infoWindow;
+      var statueName = dbPost.ASSET_NAME;
+      console.log(statueName);
+      $("#statueName").text(statueName);
       var marker = {
         lat: parseFloat(dbPost.LATITUDE),
         lng: parseFloat(dbPost.LONGITUDE)

@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     Upload.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     Upload.belongsTo(models.Statue, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
