@@ -31,4 +31,20 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.post("/api/log", function(req, res) {
+      var statueLog= {
+        statue: "",
+        photo:"",
+      };
+
+  // users trip input
+      var log = req.body;
+  })
 };
+
+// saves users image to database after picture 
+uploads.push(log);
+
+// returns image, statue to display on log.html page
+res.json(staueLog);

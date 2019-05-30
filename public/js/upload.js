@@ -62,7 +62,7 @@ $(document).ready(function() {
           image = new Image();
           console.log(image);
           image.src = imgSrc;
-          $("body").append(image);
+          // $("body").append(image);
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
               function(position) {
@@ -124,4 +124,16 @@ $(document).ready(function() {
       window.location.href = "/table";
     });
   }
+
+  // post data to Log 
+  
+  $.post("/api/log", statueLog, function(data) {
+
+    // pulls result to display img and statue name
+    $("#statueName").text(data.name);
+    $("#camera--output").attr("src", data.photo);
+
+    // display modal with image & statue name
+    $("#imageModal").modal("");
+  });
 });

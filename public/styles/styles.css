@@ -7,6 +7,7 @@
   max-height: 50%;
   max-width: 50%;
   object-fit: cover;
+
 }
 
 #map {
@@ -38,6 +39,7 @@
   position: relative;
   bottom: -380px;
   margin-left: 70%;
+  margin-top: 4%;
 }
 
 .taken {
@@ -122,6 +124,7 @@ h4{
 
 h5 {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 40px;
   color:black;
 }
@@ -172,7 +175,7 @@ h6{
   height: 400px;
   padding: 20px;
   align-content: center;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 .footer {
