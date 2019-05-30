@@ -18,7 +18,7 @@
 }
 
 #camera--view,
-#camera--sensor,
+#camera--sensor
 #camera--output {
   transform: scaleX(-1);
   filter: FlipH;
@@ -31,12 +31,12 @@
   font-size: 16px;
   border-radius: 30px;
   border: none;
-  padding: 15px 20px;
+  padding: 5px 10px;
   text-align: center;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-  position: fixed;
-  bottom: 30px;
-  left: calc(50% - 100px);
+  position: relative;
+  bottom: -380px;
+  margin-left: 70%;
 }
 
 .taken {
@@ -89,12 +89,12 @@ body {
   font-style: italic;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   padding: 20px;
   background-color: #070707;
   opacity: .6;
   /* width: 50%; */
-  color: white;
+  color: whitesmoke;
   /* opacity: 0.9; */
 }
 
@@ -108,16 +108,31 @@ p {
   color: #f2f2f2;
 }
 
+h1{
+  color: whitesmoke;
+}
+
 h2 {
   text-align: center;
   margin-top: 20%;
   color: #f2f2f2;
 }
 
+h4{
+
+  color:white;
+
+}
+
 h5 {
   text-align: center;
   margin-bottom: 40px;
-  margin-top: 20px;
+  color:black;
+}
+
+h6{
+  color:black;
+
 }
 
 
@@ -164,7 +179,7 @@ h5 {
 
 .photos {
   margin: auto;
-  background-color: blue;
+  /* background-color: blue; */
   width: 50%;
   height: 400px;
   padding: 20px;
