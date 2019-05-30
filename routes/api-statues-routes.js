@@ -18,6 +18,13 @@ module.exports = function(app) {
       res.json(dbStatues);
     });
   });
+  
+  app.get("/api/uploads/", function(req, res) {
+    db.Upload.findAll({}).then(function(dbStatues) {
+      //console.log(dbStatues);
+      res.json(dbStatues);
+    });
+  });
 
   // Get route for retrieving a single statue
   app.get("/api/statues/:id", function(req, res) {

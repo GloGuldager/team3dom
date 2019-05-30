@@ -16,14 +16,16 @@ module.exports = function(app) {
     
     var photo = req.body;
 
-    //console.log(photo)
+    //console.log(photo);
     
     Object.keys(photo).forEach(key => {
       //console.log('key123', key); 
       var photoText = key    
       console.log(photoText); 
+      console.log(photoText.length);
       db.Upload.create({
-        picture: photoText
+        picture: photoText,
+        UserId: 1
       }).then(function(dbPost) {
         res.json(dbPost);
       });    

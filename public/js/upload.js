@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log("Hello World");
 
   var imgSrc;
+  var image;
 
   ajaxCall();
 
@@ -54,7 +55,9 @@ $(document).ready(function() {
           event.preventDefault();
           imgSrc = $(".taken").attr("src");
           console.log(imgSrc);
-          var image = new Image();
+          
+          image = new Image();
+          console.log(image);
           image.src = imgSrc;
           $("body").append(image);
           if (navigator.geolocation) {
@@ -82,7 +85,7 @@ $(document).ready(function() {
                 } else {
                   alert("try again");
                   submitPost(imgSrc);
-                  console.log(imgSrc);
+                  console.log(imgSrc.length);
                 }
               },
               function() {
