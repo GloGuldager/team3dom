@@ -15,6 +15,7 @@ $(document).ready(function() {
       }
       //   renderStatuesList(rowsToAdd);
       //   nameInput.val("");
+      // fixing conflicts
     });
   }
 });
