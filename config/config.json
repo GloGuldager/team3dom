@@ -2,9 +2,14 @@
   "development": {
     "username": "root",
     "password": "root",
+<<<<<<< HEAD
     "port":"8889",
     "database": "statuequest_db",
+=======
+    "database": "statueQuest_db",
+>>>>>>> 1258b76a0e31f386fdd3b1fa55193fe1f91b2b6e
     "host": "localhost",
+    "port":8889,
     "dialect": "mysql"
   },
   "test": {
