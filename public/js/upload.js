@@ -122,6 +122,7 @@ $(document).ready(function() {
   function submitPost(Upload) {
     $.post("/api/uploads/", Upload, function() {
       window.location.href = "/log";
+      //fixing conflicts
     });
   }
 
