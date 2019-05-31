@@ -51,6 +51,14 @@
   z-index: 2;
 }
 
+#theImg{
+  height:320px;
+}
+
+#exampleModalLabel{
+  text-align: center;
+}
+
 h1 {
   text-align: center;
   padding: 20px;
