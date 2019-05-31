@@ -101,7 +101,6 @@ function ajaxCall() {
               } else {
                 $("#myModal").modal(open);
                 $("#image-div").prepend('<img id="theImg" src="' + imgSrc + '" />');
-
                 $("#map-div").append(pinPoint);
                 //alert("try again");
 
@@ -142,3 +141,4 @@ function submitPost(Upload) {
     //window.location.href = "/start.html";
   });
 }
+

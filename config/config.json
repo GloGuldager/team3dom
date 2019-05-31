@@ -1,9 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "default",
+    "password": "",
     "database": "statueQuest_db",
     "host": "localhost",
+    "port":3306,
     "dialect": "mysql"
   },
   "test": {

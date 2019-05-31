@@ -55,6 +55,7 @@ $(document).ready(function() {
       //console.log(rowsPhotos);
       //   renderStatuesList(rowsToAdd);
       //   nameInput.val("");
+
     });
   }
 });
