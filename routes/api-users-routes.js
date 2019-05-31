@@ -25,6 +25,7 @@ module.exports = function(app) {
       db.Upload.create({
         picture: photoText
         // UserId: 1
+        //fixing file
       }).then(function(dbPost) {
         res.json(dbPost);
       });
