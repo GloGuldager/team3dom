@@ -121,7 +121,7 @@ $(document).ready(function() {
 
   function submitPost(Upload) {
     $.post("/api/uploads/", Upload, function() {
-      window.location.href = "/table";
+      window.location.href = "/log";
     });
   }
 
