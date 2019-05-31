@@ -172,7 +172,7 @@ h6{
   height: 400px;
   padding: 20px;
   align-content: center;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 .footer {
