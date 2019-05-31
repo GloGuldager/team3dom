@@ -58,11 +58,11 @@ $(document).ready(function() {
           event.preventDefault();
           imgSrc = $(".taken").attr("src");
           console.log(imgSrc);
-          
+
           image = new Image();
           console.log(image);
           image.src = imgSrc;
-          $("body").append(image);
+          // $("body").append(image);
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
               function(position) {
@@ -121,7 +121,18 @@ $(document).ready(function() {
 
   function submitPost(Upload) {
     $.post("/api/uploads/", Upload, function() {
-      window.location.href = "/table";
+      window.location.href = "/log";
     });
   }
+
+  // post data to Log
+
+  $.post("/api/log", statueLog, function(data) {
+    // pulls result to display img and statue name
+    $("#statueName").text(data.name);
+    $("#camera--output").attr("src", data.photo);
+
+    // display modal with image & statue name
+    $("#imageModal").modal("");
+  });
 });
