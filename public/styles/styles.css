@@ -7,6 +7,7 @@
   max-height: 50%;
   max-width: 50%;
   object-fit: cover;
+
 }
 
 #map {
@@ -15,7 +16,6 @@
   width: 50%;
   object-fit: cover;
   left: 50%;
-  float: left;
 }
 
 #camera--view,
@@ -38,6 +38,7 @@
   position: relative;
   bottom: -380px;
   margin-left: 70%;
+  margin-top: 4%;
 }
 
 .taken {
@@ -56,6 +57,7 @@ h1 {
   padding: 20px;
   margin-top: 10%;
   color: #f2f2f2;
+  /* font-family: 'Barlow', sans-serif; */
 }
 
 html,
@@ -71,12 +73,16 @@ body {
   display: flex;
 }
 
-.img {
+
+.img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  /* opacity: 0.9; */
+  margin-bottom: 5%;
+  /* width: 50%; */
+  width: 100%;
+  height: auto;
+  /* opacity: 0.5; */
 }
 
 .instructions {
@@ -122,6 +128,7 @@ h4{
 
 h5 {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 40px;
   color:black;
 }
@@ -131,16 +138,24 @@ h6{
 
 }
 
+
 .row {
-  margin-top: 5%;
+  /* margin-top: 5%; */
   position: auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* background-color: #070707;
+  opacity: .6; */
+  width: 100%;
 }
 
+#user-form{
+  margin-left: 30%;
+}
 #customers {
   margin: auto;
   margin-top: 5%;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 #customers td,
@@ -172,11 +187,21 @@ h6{
   height: 400px;
   padding: 20px;
   align-content: center;
-  border-style: solid;
+<<<<<<< HEAD
+  /* border-style: solid; */
+=======
+  /* border-style: solid;
+  border-width:1px; */
+}
+
+.img{
+  margin-left:25%;
+>>>>>>> 1258b76a0e31f386fdd3b1fa55193fe1f91b2b6e
 }
 
 .footer {
-  margin-top: 3%;
+  /* margin-top: 3%; */
+  width: 100%;
   padding: 10px;
   color: #f2f2f2;
 }
@@ -195,5 +220,9 @@ h6{
   .link {
     max-width: 20%;
     max-height: 10%;
+  }
+  .img{}
+  .subscribe{
+  
   }
 }
