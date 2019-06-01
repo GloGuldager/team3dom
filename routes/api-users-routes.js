@@ -14,13 +14,12 @@ module.exports = function(app) {
   app.post("/api/uploads", function(req, res) {
     var photo = req.body;
 
-
     //console.log(photo);
-    
+
     Object.keys(photo).forEach(key => {
-      //console.log('key123', key); 
-      var photoText = key    
-      console.log(photoText); 
+      //console.log('key123', key);
+      var photoText = key;
+      console.log(photoText);
       console.log(photoText.length);
 
       db.Upload.create({

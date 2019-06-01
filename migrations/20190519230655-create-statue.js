@@ -18,10 +18,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       LATITUDE: {
-        type: Sequelize.DECIMAL(10, 8)
+        type: Sequelize.FLOAT
       },
       LONGITUDE: {
-        type: Sequelize.DECIMAL(11, 8)
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
